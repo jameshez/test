@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.DAL", "robotjob.DAL\robotjob.DAL.csproj", "{8404854A-9012-42F6-A1E5-48421023D13F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.BLL", "robotjob.BLL\robotjob.BLL.csproj", "{CCF61B29-80C4-4334-A20F-065C4E6CC895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.Common", "robotjob.Common\robotjob.Common.csproj", "{A34A1FF3-AEED-4706-A3AA-1EB305C9F19B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOutput", "TestOutput\TestOutput.csproj", "{EDDFE8B9-E665-426A-A471-50B6F6955EA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.API", "robotjob.API\robotjob.API.csproj", "{CCC1B125-9610-403C-A868-CBB5A1CAE99B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.Model", "robotjob.Model\robotjob.Model.csproj", "{776CD263-A63A-4E4D-9A55-44A683C12687}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8404854A-9012-42F6-A1E5-48421023D13F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8404854A-9012-42F6-A1E5-48421023D13F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8404854A-9012-42F6-A1E5-48421023D13F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8404854A-9012-42F6-A1E5-48421023D13F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF61B29-80C4-4334-A20F-065C4E6CC895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF61B29-80C4-4334-A20F-065C4E6CC895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF61B29-80C4-4334-A20F-065C4E6CC895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF61B29-80C4-4334-A20F-065C4E6CC895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A34A1FF3-AEED-4706-A3AA-1EB305C9F19B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A34A1FF3-AEED-4706-A3AA-1EB305C9F19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A34A1FF3-AEED-4706-A3AA-1EB305C9F19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A34A1FF3-AEED-4706-A3AA-1EB305C9F19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDFE8B9-E665-426A-A471-50B6F6955EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDFE8B9-E665-426A-A471-50B6F6955EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDFE8B9-E665-426A-A471-50B6F6955EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDFE8B9-E665-426A-A471-50B6F6955EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC1B125-9610-403C-A868-CBB5A1CAE99B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC1B125-9610-403C-A868-CBB5A1CAE99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC1B125-9610-403C-A868-CBB5A1CAE99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC1B125-9610-403C-A868-CBB5A1CAE99B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{776CD263-A63A-4E4D-9A55-44A683C12687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776CD263-A63A-4E4D-9A55-44A683C12687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776CD263-A63A-4E4D-9A55-44A683C12687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776CD263-A63A-4E4D-9A55-44A683C12687}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
