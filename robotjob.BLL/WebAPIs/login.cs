@@ -25,6 +25,8 @@ namespace robotjob.BLL.WebAPI
             
             ds = user.LoginUser(customer);
 
+            user.AddUser(customer);
+
             if (ds.Tables[0].Rows.Count == 0)
             {
                 return "{\"code\":\"0001\",\"msg\":\"不存在该用户\"}";
