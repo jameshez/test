@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.DAL", "robotjob.DAL\robotjob.DAL.csproj", "{8404854A-9012-42F6-A1E5-48421023D13F}"
 EndProject
@@ -14,6 +14,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.API", "robotjob.API\robotjob.API.csproj", "{CCC1B125-9610-403C-A868-CBB5A1CAE99B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.Model", "robotjob.Model\robotjob.Model.csproj", "{776CD263-A63A-4E4D-9A55-44A683C12687}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.DBUtility", "DBUtility\robotjob.DBUtility.csproj", "{43126494-5DE8-4694-98DA-5745F2B491C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.SQLServerDAL", "robotjob.SQLServerDAL\robotjob.SQLServerDAL.csproj", "{F0CC3D62-385D-40F2-9D53-8E9ECF6E32EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.IDAL", "robotjob.IDAL\robotjob.IDAL.csproj", "{C5C639C3-FB7E-404F-A214-9D7606EA0AC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.DALFactory", "robotjob.DALFactory\robotjob.DALFactory.csproj", "{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +53,22 @@ Global
 		{776CD263-A63A-4E4D-9A55-44A683C12687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{776CD263-A63A-4E4D-9A55-44A683C12687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{776CD263-A63A-4E4D-9A55-44A683C12687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43126494-5DE8-4694-98DA-5745F2B491C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43126494-5DE8-4694-98DA-5745F2B491C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43126494-5DE8-4694-98DA-5745F2B491C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43126494-5DE8-4694-98DA-5745F2B491C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0CC3D62-385D-40F2-9D53-8E9ECF6E32EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0CC3D62-385D-40F2-9D53-8E9ECF6E32EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0CC3D62-385D-40F2-9D53-8E9ECF6E32EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0CC3D62-385D-40F2-9D53-8E9ECF6E32EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5C639C3-FB7E-404F-A214-9D7606EA0AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C639C3-FB7E-404F-A214-9D7606EA0AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C639C3-FB7E-404F-A214-9D7606EA0AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C639C3-FB7E-404F-A214-9D7606EA0AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

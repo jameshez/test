@@ -1,8 +1,8 @@
 ﻿using robotjob.DAL;
 using System.Data;
 using robotjob.DAL.User;
-using robotjob.Model.Sys;
-
+using robotjob.Model;
+using robotjob.IDAL;
 
 namespace robotjob.BLL.WebAPI
 {
@@ -13,25 +13,14 @@ namespace robotjob.BLL.WebAPI
 
         public string clientAppDoLogin(string username, string userpass)
         {
-            //_PageRecords = myConn.load_Query(string.Format("SELECT CustomerId,CustomerName,CustomerPass,Phone,CustomerType FROM Sys_Customer where CustomerName='{0}' OR Phone='{0}' OR Email='{0}'", username));
+            IUser dal = new SQLServerDAL.User();
+            var user = dal.GetUser(username);
 
-            Sys_Customer customer = new Sys_Customer()
-            {
-                CustomerName = username,
-                Phone = username,
-                NickName = username,
-                Email = username
-            };
-            
-            ds = user.LoginUser(customer);
-
-            user.AddUser(customer);
-
-            if (ds.Tables[0].Rows.Count == 0)
+            if(user == null)
             {
                 return "{\"code\":\"0001\",\"msg\":\"不存在该用户\"}";
             }
-            if (ds.Tables[0].Rows[0]["CustomerPass"].ToString().Equals(userpass))
+            if(user.CustomerPass.Equals(userpass))
             {
                 return "{\"code\":\"0001\",\"msg\":\"正确\"}";
             }

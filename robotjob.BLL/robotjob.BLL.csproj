@@ -51,9 +51,17 @@
       <Project>{8404854a-9012-42f6-a1e5-48421023d13f}</Project>
       <Name>robotjob.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\robotjob.IDAL\robotjob.IDAL.csproj">
+      <Project>{c5c639c3-fb7e-404f-a214-9d7606ea0ac1}</Project>
+      <Name>robotjob.IDAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\robotjob.Model\robotjob.Model.csproj">
       <Project>{776cd263-a63a-4e4d-9a55-44a683c12687}</Project>
       <Name>robotjob.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\robotjob.SQLServerDAL\robotjob.SQLServerDAL.csproj">
+      <Project>{f0cc3d62-385d-40f2-9d53-8e9ecf6e32ef}</Project>
+      <Name>robotjob.SQLServerDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

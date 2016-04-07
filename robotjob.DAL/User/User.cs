@@ -5,7 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using robotjob.Model.Sys;
+using robotjob.Model;
 
 namespace robotjob.DAL.User
 {
@@ -32,7 +32,8 @@ namespace robotjob.DAL.User
             parameters[2].Value = customer.NickName;
             parameters[3].Value = customer.Email;
 
-            DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
+            //DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
+            DataSet ds = null;
             return ds;
         }
 

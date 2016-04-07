@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A34A1FF3-AEED-4706-A3AA-1EB305C9F19B}</ProjectGuid>
+    <ProjectGuid>{C5C639C3-FB7E-404F-A214-9D7606EA0AC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>robotjob.Common</RootNamespace>
-    <AssemblyName>robotjob.Common</AssemblyName>
+    <RootNamespace>robotjob.IDAL</RootNamespace>
+    <AssemblyName>robotjob.IDAL</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,12 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net">
-      <HintPath>C:\Users\James\Desktop\log4net-1.2.15-bin-newkey\log4net-1.2.15\bin\cli\1.0\release\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,13 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SqlDataReaderToModel.cs" />
-    <Compile Include="FlexibleDynamicProxy.cs" />
-    <Compile Include="FlexibleAOPAttribute.cs" />
-    <Compile Include="TextHandler.cs" />
-    <Compile Include="TimeHelper.cs" />
-    <Compile Include="LoggerHelper.cs" />
+    <Compile Include="IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\robotjob.Model\robotjob.Model.csproj">
+      <Project>{776cd263-a63a-4e4d-9a55-44a683c12687}</Project>
+      <Name>robotjob.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

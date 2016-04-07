@@ -2,12 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.Linq.Mapping;
 
-namespace robotjob.Model.Sys
+namespace robotjob.Model
 {
     [Serializable]
+    [Table(Name = "Sys_Customer")]
     public class Sys_Customer
     {
+        public Sys_Customer(
+            string CustomerId, 
+            string CustomerName, 
+            string CustomerPass,
+            short? CustomerType,
+            string Email,
+            DateTime? AddDate,
+            short? IsActiveEmail,
+            short? IsActivePhone,
+            string NickName,
+            string Phone
+            )
+        {
+            this.CustomerId = CustomerId;
+            this.CustomerName = CustomerName;
+            this.CustomerPass = CustomerPass;
+            this.CustomerType = CustomerType;
+            this.Email = Email;
+            this.AddDate = AddDate;
+            this.IsActiveEmail = IsActiveEmail;
+            this.IsActivePhone = IsActivePhone;
+            this.NickName = NickName;
+            this.Phone = Phone;
+        }
+
+        public Sys_Customer() { }
+
+
         /// <summary>
         /// id
         /// </summary>
@@ -72,21 +102,21 @@ namespace robotjob.Model.Sys
         /// <summary>
         /// 手机是否激活
         /// </summary>
-        private short? _IsActivPhone;
-        public short? IsActivPhone
+        private short? _IsActivePhone;
+        public short? IsActivePhone
         {
-            get { return _IsActivPhone; }
-            set { _IsActivPhone = value; }
+            get { return _IsActivePhone; }
+            set { _IsActivePhone = value; }
         }
 
         /// <summary>
         /// 邮箱是否激活
         /// </summary>
-        private short? _IsActivEmail;
-        public short? IsActivEmail
+        private short? _IsActiveEmail;
+        public short? IsActiveEmail
         {
-            get { return _IsActivEmail; }
-            set { _IsActivEmail = value; }
+            get { return _IsActiveEmail; }
+            set { _IsActiveEmail = value; }
         }
 
         /// <summary>
