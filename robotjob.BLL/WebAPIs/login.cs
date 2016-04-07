@@ -1,16 +1,9 @@
-﻿using robotjob.DAL;
-using System.Data;
-using robotjob.DAL.User;
-using robotjob.Model;
-using robotjob.IDAL;
+﻿using robotjob.IDAL;
 
 namespace robotjob.BLL.WebAPI
 {
     public class login
     {
-        private User user = new User();
-        private DataSet ds;
-
         public string clientAppDoLogin(string username, string userpass)
         {
             IUser dal = new SQLServerDAL.User();

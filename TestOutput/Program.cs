@@ -41,7 +41,7 @@ namespace TestOutput
                         + "where PositionRequire like '%[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]%'";
             try
             {
-                DataSet reader = DbHelperSQL.Query(strSQL);
+                DataSet reader = null;
                 Console.WriteLine(reader.Tables[0].ToJson());
                 Console.WriteLine(Encrypt(reader.Tables[0].ToJson()));
                 Console.WriteLine(TextHandler.MD5((Encrypt(reader.Tables[0].ToJson()) + "95968")));

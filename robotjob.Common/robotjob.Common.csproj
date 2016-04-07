@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AOPInterface.cs" />
     <Compile Include="SqlDataReaderToModel.cs" />
     <Compile Include="FlexibleDynamicProxy.cs" />
     <Compile Include="FlexibleAOPAttribute.cs" />

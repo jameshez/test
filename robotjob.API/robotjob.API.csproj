@@ -84,10 +84,6 @@
       <Project>{a34a1ff3-aeed-4706-a3aa-1eb305c9f19b}</Project>
       <Name>robotjob.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\robotjob.DAL\robotjob.DAL.csproj">
-      <Project>{8404854a-9012-42f6-a1e5-48421023d13f}</Project>
-      <Name>robotjob.DAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

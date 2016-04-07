@@ -11,7 +11,7 @@ using System.Text;
 
 namespace robotjob.SQLServerDAL
 {
-    public class User : IUser
+    public class User : IAOPInterface, IUser
     {
         private const string PARM_ITEM_ID = "@CustomerName";
         private const string SQL_SELECT_ITEM = "select * from Sys_Customer where CustomerName = @CustomerName or Phone = @CustomerName or NickName = @CustomerName or Email = @CustomerName ";

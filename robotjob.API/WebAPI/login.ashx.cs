@@ -17,8 +17,12 @@ namespace robotjob.API.WebAPI
             string username = context.Request["userName"];
             string userPass = context.Request["userPass"];
 
-            string strJson = loginBLL.clientAppDoLogin(username, TextHandler.MD5(userPass));
+            string strJson = "{\"code\":\"0001\",\"msg\":\"需要安全连接\"}";
 
+            if(System.Web.HttpContext.Current.Request.IsSecureConnection)
+            {
+                strJson = loginBLL.clientAppDoLogin(username, TextHandler.MD5(userPass));
+            }
             context.Response.Write(strJson);
             context.Response.End();
         }
