@@ -47,6 +47,10 @@
       <Project>{a34a1ff3-aeed-4706-a3aa-1eb305c9f19b}</Project>
       <Name>robotjob.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\robotjob.DALFactory\robotjob.DALFactory.csproj">
+      <Project>{9f443fa8-cca4-44fe-8ef6-d11ce22d39ab}</Project>
+      <Name>robotjob.DALFactory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\robotjob.IDAL\robotjob.IDAL.csproj">
       <Project>{c5c639c3-fb7e-404f-a214-9d7606ea0ac1}</Project>
       <Name>robotjob.IDAL</Name>

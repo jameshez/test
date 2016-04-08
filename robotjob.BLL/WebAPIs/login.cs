@@ -4,11 +4,10 @@ namespace robotjob.BLL.WebAPI
 {
     public class login
     {
+        private static IUser dal = DALFactory.DataAccess.CreateUser();
         public string clientAppDoLogin(string username, string userpass)
         {
-            IUser dal = new SQLServerDAL.User();
             var user = dal.GetUser(username);
-
             if(user == null)
             {
                 return "{\"code\":\"0001\",\"msg\":\"不存在该用户\"}";

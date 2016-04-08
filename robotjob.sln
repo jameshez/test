@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.Common", "robotjob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOutput", "TestOutput\TestOutput.csproj", "{EDDFE8B9-E665-426A-A471-50B6F6955EA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.API", "robotjob.API\robotjob.API.csproj", "{CCC1B125-9610-403C-A868-CBB5A1CAE99B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.Model", "robotjob.Model\robotjob.Model.csproj", "{776CD263-A63A-4E4D-9A55-44A683C12687}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.DBUtility", "DBUtility\robotjob.DBUtility.csproj", "{43126494-5DE8-4694-98DA-5745F2B491C5}"
@@ -20,6 +18,29 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.IDAL", "robotjob.IDAL\robotjob.IDAL.csproj", "{C5C639C3-FB7E-404F-A214-9D7606EA0AC1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.DALFactory", "robotjob.DALFactory\robotjob.DALFactory.csproj", "{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web\", "{E597774C-6015-4AE9-AAE6-09650D1131DF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{CCF61B29-80C4-4334-A20F-065C4E6CC895}|robotjob.BLL.dll;{A34A1FF3-AEED-4706-A3AA-1EB305C9F19B}|robotjob.Common.dll;{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}|robotjob.DALFactory.dll;{C5C639C3-FB7E-404F-A214-9D7606EA0AC1}|robotjob.IDAL.dll;{776CD263-A63A-4E4D-9A55-44A683C12687}|robotjob.Model.dll;{F0CC3D62-385D-40F2-9D53-8E9ECF6E32EF}|robotjob.SQLServerDAL.dll;{43126494-5DE8-4694-98DA-5745F2B491C5}|DBUtility.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_5488"
+		Debug.AspNetCompiler.PhysicalPath = "Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5488\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_5488"
+		Release.AspNetCompiler.PhysicalPath = "Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5488\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "5488"
+		SlnRelativePath = "Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +60,6 @@ Global
 		{EDDFE8B9-E665-426A-A471-50B6F6955EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDDFE8B9-E665-426A-A471-50B6F6955EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDDFE8B9-E665-426A-A471-50B6F6955EA9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CCC1B125-9610-403C-A868-CBB5A1CAE99B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CCC1B125-9610-403C-A868-CBB5A1CAE99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CCC1B125-9610-403C-A868-CBB5A1CAE99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCC1B125-9610-403C-A868-CBB5A1CAE99B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{776CD263-A63A-4E4D-9A55-44A683C12687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{776CD263-A63A-4E4D-9A55-44A683C12687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{776CD263-A63A-4E4D-9A55-44A683C12687}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +80,10 @@ Global
 		{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E597774C-6015-4AE9-AAE6-09650D1131DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E597774C-6015-4AE9-AAE6-09650D1131DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E597774C-6015-4AE9-AAE6-09650D1131DF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E597774C-6015-4AE9-AAE6-09650D1131DF}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
