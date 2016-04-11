@@ -11,10 +11,8 @@ namespace robotjob.DALFactory
     {
         private static readonly string path = ConfigurationManager.AppSettings["SQLDALPath"];
 
-        private DataAccess()
-        {
-                
-        }
+        private DataAccess(){ }
+
         public static IDAL.IUser CreateUser()
         {
             string className = path + ".User";

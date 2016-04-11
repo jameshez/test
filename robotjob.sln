@@ -42,6 +42,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web\", "{E597774C-60
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.BLL.Common.Tests", "robotjob.BLL.Common.Tests\robotjob.BLL.Common.Tests.csproj", "{227CD2B0-5592-490C-9347-A9551361BD4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +86,10 @@ Global
 		{E597774C-6015-4AE9-AAE6-09650D1131DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E597774C-6015-4AE9-AAE6-09650D1131DF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{E597774C-6015-4AE9-AAE6-09650D1131DF}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{227CD2B0-5592-490C-9347-A9551361BD4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{227CD2B0-5592-490C-9347-A9551361BD4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{227CD2B0-5592-490C-9347-A9551361BD4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{227CD2B0-5592-490C-9347-A9551361BD4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

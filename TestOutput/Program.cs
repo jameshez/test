@@ -1,4 +1,5 @@
-﻿using robotjob.Common;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using robotjob.Common;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.Script.Serialization;
@@ -16,16 +18,19 @@ namespace TestOutput
     {
         public static string sKey = "zktd1234";
         static string connectionstr = "Server=115.28.35.193;User id=sa;pwd=abc123,./;database=robottest";
+
         static void Main(string[] args)
         {
-            Console.WriteLine(GetTimeStamp());
-            //Console.WriteLine(Encrypt("Hello World"));
-            //Console.WriteLine(DesDecrypt(Encrypt("Hello World")));
+            WebClient client = new WebClient();
+            client.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
 
-            Console.WriteLine(Encrypt("中科天地"));
-            Console.WriteLine(DesDecrypt(Encrypt("中科天地")));
-            Console.WriteLine(DesDecrypt("sYlKz4TBxcfIBwe6AD14xw=="));
-            //getJobInfo();
+            var uri = new Uri(@"http://localhost:8001/WebAPI/login.ashx?userName=yilang&userPass=123123");
+
+            string result = Encoding.UTF8.GetString(client.DownloadData(uri.ToString()));
+
+            string expected = "{\"code\":\"0001\",\"msg\":\"用户名或密码错误\"}";
+
+            Assert.AreEqual(expected, result);
         }
 
         public static void getJobInfo()
@@ -44,7 +49,7 @@ namespace TestOutput
                 DataSet reader = null;
                 Console.WriteLine(reader.Tables[0].ToJson());
                 Console.WriteLine(Encrypt(reader.Tables[0].ToJson()));
-                Console.WriteLine(TextHandler.MD5((Encrypt(reader.Tables[0].ToJson()) + "95968")));
+                Console.WriteLine(TextHandler.PasswordMD5((Encrypt(reader.Tables[0].ToJson()) + "95968")));
             }
             catch (Exception ex)
             {

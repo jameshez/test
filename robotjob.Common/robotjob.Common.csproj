@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AOPInterface.cs" />
+    <Compile Include="EnumText.cs" />
     <Compile Include="SqlDataReaderToModel.cs" />
     <Compile Include="FlexibleDynamicProxy.cs" />
     <Compile Include="FlexibleAOPAttribute.cs" />

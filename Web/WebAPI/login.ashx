@@ -6,7 +6,7 @@ using robotjob.Common;
 
 public class login : IHttpHandler
 {
-    private robotjob.BLL.WebAPI.login loginBLL = new robotjob.BLL.WebAPI.login();
+    private robotjob.BLL.WebAPI.LoginAction loginBLL = new robotjob.BLL.WebAPI.LoginAction();
 
     public void ProcessRequest(HttpContext context)
     {
@@ -15,12 +15,14 @@ public class login : IHttpHandler
         string username = context.Request["userName"];
         string userPass = context.Request["userPass"];
 
-        string strJson = "{\"code\":\"0001\",\"msg\":\"需要安全连接\"}";
+        string strJson = "{\"code\":\"0001\",\"msg\":\"未知错误\"}";
 
-        if (System.Web.HttpContext.Current.Request.IsSecureConnection)
-        {
-            strJson = loginBLL.clientAppDoLogin(username, TextHandler.MD5(userPass));
-        }
+        //条件允许时可以检查是否SSL连接开启
+        //if (System.Web.HttpContext.Current.Request.IsSecureConnection)
+        //{
+        //}
+        strJson = loginBLL.clientLogin(username,userPass);
+
         context.Response.Write(strJson);
         context.Response.End();
     }
@@ -29,7 +31,7 @@ public class login : IHttpHandler
     {
         get
         {
-            return false;
+            return true;
         }
     }
 

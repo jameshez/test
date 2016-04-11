@@ -8,7 +8,7 @@ using System.Text;
 namespace robotjob.Common
 {
     /// <summary>
-    /// 此类通过反射的方式来填写项，比较花时间，个人建议之后直接通过SQL语法中强制定义位置来匹配
+    /// 此类通过反射的方式来填写项，比较花时间，个人建议之后直接通过SQL语法中强制定义位置来匹配，反射性能损耗比较大，前期可以简单运用
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class SqlDataReaderToModel<T> where T : class, new()
@@ -23,14 +23,14 @@ namespace robotjob.Common
             {
                 for (int i = 0; i < count; i++)
                 {
-                    if (!Convert.IsDBNull(dr[i]))//判断值是否为空  
+                    if (!Convert.IsDBNull(dr[i]))
                     {
-                        string name = dr.GetName(i).ToUpper();//字段名  
-                        if (name.Equals(property.Name.ToUpper()))//判断字段名是否和model里的相等  
+                        string name = dr.GetName(i).ToUpper();
+                        if (name.Equals(property.Name.ToUpper()))  
                         {
                             try
                             {
-                                property.SetValue(model, dr.GetValue(i), null);//为model赋值  
+                                property.SetValue(model, dr.GetValue(i), null);
                                 break;
                             }
                             catch { }

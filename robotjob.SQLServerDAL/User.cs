@@ -2,16 +2,13 @@
 using robotjob.DBUtility;
 using robotjob.IDAL;
 using robotjob.Model;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
+
 
 namespace robotjob.SQLServerDAL
 {
-    public class User : IAOPInterface, IUser
+    public class User : IUser
     {
         private const string PARM_ITEM_ID = "@CustomerName";
         private const string SQL_SELECT_ITEM = "select * from Sys_Customer where CustomerName = @CustomerName or Phone = @CustomerName or NickName = @CustomerName or Email = @CustomerName ";
