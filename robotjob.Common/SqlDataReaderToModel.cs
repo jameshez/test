@@ -11,9 +11,9 @@ namespace robotjob.Common
     /// 此类通过反射的方式来填写项，比较花时间，个人建议之后直接通过SQL语法中强制定义位置来匹配，反射性能损耗比较大，前期可以简单运用
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class SqlDataReaderToModel<T> where T : class, new()
+    public static class SqlDataReaderToModel<T> where T : class, new()
     {
-        public T DoTransferType(IDataReader dr)
+        public static T DoTransferType(IDataReader dr)
         {
             T model = new T();
             int count = dr.FieldCount;

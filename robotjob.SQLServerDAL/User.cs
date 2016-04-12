@@ -14,7 +14,6 @@ namespace robotjob.SQLServerDAL
     {
         private const string PARM_ITEM_ID = "@CustomerName";
         private const string SQL_SELECT_ITEM = "select * from Sys_Customer where CustomerName = @CustomerName or Phone = @CustomerName or NickName = @CustomerName or Email = @CustomerName ";
-        SqlDataReaderToModel<Sys_Customer> translator = new SqlDataReaderToModel<Sys_Customer>();
 
         [Logs]
         public Sys_Customer GetUser(string userName)
@@ -27,9 +26,11 @@ namespace robotjob.SQLServerDAL
             {
                 if (rdr.Read())
                 {
-                    user = translator.DoTransferType(rdr);
+                    //此行性能有损耗
+                    user = SqlDataReaderToModel<Sys_Customer>.DoTransferType(rdr);
                 }
             }
+
             return user;
         }
     }
