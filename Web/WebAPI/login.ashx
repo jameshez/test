@@ -21,7 +21,7 @@ public class login : IHttpHandler
         //if (System.Web.HttpContext.Current.Request.IsSecureConnection)
         //{
         //}
-        strJson = loginBLL.clientLogin(username,userPass);
+        strJson = loginBLL.enterpriseLogin(username,userPass);
 
         context.Response.Write(strJson);
         context.Response.End();

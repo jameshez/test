@@ -13,6 +13,10 @@ namespace robotjob.DALFactory
 
         private DataAccess(){ }
 
+        /// <summary>
+        /// 实例化 User DAL
+        /// </summary>
+        /// <returns></returns>
         public static IDAL.IUser CreateUser()
         {
             string className = path + ".User";
