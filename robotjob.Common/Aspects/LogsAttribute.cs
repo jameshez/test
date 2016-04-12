@@ -1,6 +1,9 @@
 ﻿using PostSharp.Aspects;
+using robotjob.Common.Log;
 using System;
 using System.Diagnostics;
+using System.Reflection;
+using System.Text;
 
 namespace robotjob.Common.Aspects
 {
@@ -22,15 +25,34 @@ namespace robotjob.Common.Aspects
         public override void OnEntry(MethodExecutionArgs eventArgs)
         {
             _stopwatch.Restart();
-            base.OnEntry(eventArgs);
-            LoggerHelper.Writelog("方法 " + eventArgs.Method.Name + " 开始执行");
+            Arguments arguments = eventArgs.Arguments;
+            StringBuilder sb = new StringBuilder();
+            ParameterInfo[] parameters = eventArgs.Method.GetParameters();
+            for (int i = 0; arguments != null && i < arguments.Count; i++)
+            {
+                //进入的参数的值
+                sb.Append(parameters[i].Name + "=" + arguments[i] + "");
+            }
+            LoggerHelper.Writelog("方法 " + eventArgs.Method.Name + " 开始执行，参数为：" + sb);
+            
         }
 
         public override void OnSuccess(MethodExecutionArgs args)
         {
             _stopwatch.Stop();
-            base.OnSuccess(args);
-            LoggerHelper.Writelog("方法 " + args.Method.Name + " 执行结束，用时 " + _stopwatch.ElapsedMilliseconds + "ms" );
+            LoggerHelper.Writelog(
+                "方法 " + args.Method.Name + " 执行结束，用时 " + _stopwatch.ElapsedMilliseconds + "ms",
+                LogLevel.Success
+                );
+        }
+
+        public override void OnException(MethodExecutionArgs args)
+        {
+            _stopwatch.Stop();
+            LoggerHelper.Writelog(
+                "方法 " + args.Method.Name + " 执行出错，错误为：" + args.Exception,
+                LogLevel.Error
+                );
         }
 
         public void RuntimeInitializeInstance()

@@ -27,11 +27,11 @@ public class login : IHttpHandler
         context.Response.End();
     }
 
-    public bool IsReusable
+    public bool IsReusable 
     {
         get
         {
-            return true;
+            return false;
         }
     }
 

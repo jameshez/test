@@ -51,12 +51,13 @@
     <Compile Include="AOPInterface.cs" />
     <Compile Include="Aspects\LogsAttribute.cs" />
     <Compile Include="EnumText.cs" />
+    <Compile Include="Log\LogLevel.cs" />
     <Compile Include="SqlDataReaderToModel.cs" />
     <Compile Include="FlexibleDynamicProxy.cs" />
     <Compile Include="FlexibleAOPAttribute.cs" />
     <Compile Include="TextHandler.cs" />
     <Compile Include="TimeHelper.cs" />
-    <Compile Include="LoggerHelper.cs" />
+    <Compile Include="Log\LoggerHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
