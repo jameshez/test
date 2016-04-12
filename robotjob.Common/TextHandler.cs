@@ -71,6 +71,12 @@ namespace robotjob.Common
             return Regex.IsMatch(Str, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
         }
 
+        /// <summary>
+        /// 检查格式是否正确
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public static bool CheckIsValid(string input, EnumText type)
         {
             switch (type)
