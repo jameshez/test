@@ -1,21 +1,40 @@
 ﻿using PostSharp.Aspects;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using robotjob.Common;
 
 namespace robotjob.Common.Aspects
 {
+    /// <summary>
+    /// 目前记录了方法的执行时间
+    /// </summary>
     [Serializable]
-    public class LogsAttribute : OnMethodBoundaryAspect
+    public class LogsAttribute : OnMethodBoundaryAspect, IInstanceScopedAspect
     {
-        //进入函数时输出函数的输入参数
+        [NonSerialized]
+        private Stopwatch _stopwatch;
+
+        public object CreateInstance(AdviceArgs adviceArgs)
+        {
+            return MemberwiseClone();
+        }
+
         public override void OnEntry(MethodExecutionArgs eventArgs)
         {
-            LoggerHelper.Writelog(eventArgs.Arguments.ToString());
+            _stopwatch.Restart();
+            base.OnEntry(eventArgs);
+            LoggerHelper.Writelog("方法 " + eventArgs.Method.Name + " 开始执行");
+        }
+
+        public override void OnSuccess(MethodExecutionArgs args)
+        {
+            _stopwatch.Stop();
+            base.OnSuccess(args);
+            LoggerHelper.Writelog("方法 " + args.Method.Name + " 执行结束，用时 " + _stopwatch.ElapsedMilliseconds + "ms" );
+        }
+
+        public void RuntimeInitializeInstance()
+        {
+            _stopwatch = new Stopwatch();
         }
     }
 }
