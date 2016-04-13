@@ -52,17 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AOPInterface.cs" />
+    <Compile Include="AOPs\AOPInterface.cs" />
     <Compile Include="Aspects\LogsAttribute.cs" />
     <Compile Include="Email\EmailHelper.cs" />
     <Compile Include="Email\EmailSender.cs" />
-    <Compile Include="EnumText.cs" />
+    <Compile Include="TextHandler\EnumText.cs" />
     <Compile Include="Log\LogLevel.cs" />
-    <Compile Include="SqlDataReaderToModel.cs" />
-    <Compile Include="FlexibleDynamicProxy.cs" />
-    <Compile Include="FlexibleAOPAttribute.cs" />
-    <Compile Include="TextHandler.cs" />
-    <Compile Include="TimeHelper.cs" />
+    <Compile Include="SQLToModel\SqlDataReaderToModel.cs" />
+    <Compile Include="AOPs\FlexibleDynamicProxy.cs" />
+    <Compile Include="AOPs\FlexibleAOPAttribute.cs" />
+    <Compile Include="TextHandler\TextHandler.cs" />
+    <Compile Include="TextHandler\TimeHelper.cs" />
     <Compile Include="Log\LoggerHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
