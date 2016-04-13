@@ -7,8 +7,9 @@ namespace robotjob.Common.Log
 {
     public enum LogLevel
     {
-        Error,
-        Warning,
-        Success
+        Error = 1,
+        Warning = 2,
+        Success = 3,
+        Debug = 4
     }
 }

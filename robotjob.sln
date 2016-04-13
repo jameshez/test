@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotjob.DALFactory", "robo
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web\", "{E597774C-6015-4AE9-AAE6-09650D1131DF}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		ProjectReferences = "{CCF61B29-80C4-4334-A20F-065C4E6CC895}|robotjob.BLL.dll;{A34A1FF3-AEED-4706-A3AA-1EB305C9F19B}|robotjob.Common.dll;{9F443FA8-CCA4-44FE-8EF6-D11CE22D39AB}|robotjob.DALFactory.dll;{C5C639C3-FB7E-404F-A214-9D7606EA0AC1}|robotjob.IDAL.dll;{776CD263-A63A-4E4D-9A55-44A683C12687}|robotjob.Model.dll;{F0CC3D62-385D-40F2-9D53-8E9ECF6E32EF}|robotjob.SQLServerDAL.dll;{43126494-5DE8-4694-98DA-5745F2B491C5}|DBUtility.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_5488"
 		Debug.AspNetCompiler.PhysicalPath = "Web\"

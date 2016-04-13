@@ -7,6 +7,10 @@ using System.Text;
 
 namespace robotjob.Common.Aspects
 {
+    public class ClassLogAttribute : TypeLevelAspect
+    {
+
+    }
     /// <summary>
     /// 目前记录了方法的执行时间，输出样例：
     /// [2016-04-12 10:39:36]方法 GetUser 执行结束，用时 164ms
@@ -44,6 +48,10 @@ namespace robotjob.Common.Aspects
                 "方法 " + args.Method.Name + " 执行结束，用时 " + _stopwatch.ElapsedMilliseconds + "ms",
                 LogLevel.Success
                 );
+            //LoggerHelper.WritelogAsync(
+            //    "方法 " + args.Method.Name + " 执行结束，用时 " + _stopwatch.ElapsedMilliseconds + "ms",
+            //    LogLevel.Success
+            //    );
         }
 
         public override void OnException(MethodExecutionArgs args)
@@ -55,6 +63,9 @@ namespace robotjob.Common.Aspects
                 );
         }
 
+        /// <summary>
+        /// 初始化类必须的方法
+        /// </summary>
         public void RuntimeInitializeInstance()
         {
             _stopwatch = new Stopwatch();

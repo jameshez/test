@@ -9,7 +9,7 @@ namespace robotjob.DALFactory
 {
     public class DataAccess
     {
-        private static readonly string path = ConfigurationManager.AppSettings["SQLDALPath"];
+        private static readonly string path = ConfigurationManager.AppSettings["SQLDALPath"].ToString();
 
         private DataAccess(){ }
 
