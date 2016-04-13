@@ -54,6 +54,8 @@
   <ItemGroup>
     <Compile Include="AOPInterface.cs" />
     <Compile Include="Aspects\LogsAttribute.cs" />
+    <Compile Include="Email\EmailHelper.cs" />
+    <Compile Include="Email\EmailSender.cs" />
     <Compile Include="EnumText.cs" />
     <Compile Include="Log\LogLevel.cs" />
     <Compile Include="SqlDataReaderToModel.cs" />

@@ -14,7 +14,7 @@ namespace robotjob.Common.Log
         //private static readonly string _logFolderPath = @"C:\Users\James\Desktop\测试\";
         public static readonly string _logFolderPath = ConfigurationManager.AppSettings["LogPath"].ToString();
 
-        private static readonly string _successLogFilePath = "logSuccess";
+        private static readonly string _successLogFilePath = "logInfo";
         private static readonly string _errLogFilePath = "logError";
         private static readonly string _warningLogFilePath = "logWarning";
 
@@ -38,7 +38,7 @@ namespace robotjob.Common.Log
         //    log.Error(msg);
         //}
 
-        private static string BuildFilePath(LogLevel level = LogLevel.Success)
+        private static string BuildFilePath(LogLevel level)
         {
             string _logPath = _logFolderPath + DateTime.Now.ToString("yyyyMMdd");
             switch (level)
@@ -49,7 +49,7 @@ namespace robotjob.Common.Log
                 case LogLevel.Warning:
                     _logPath += _warningLogFilePath;
                     break;
-                case LogLevel.Success:
+                case LogLevel.Info:
                     _logPath += _successLogFilePath;
                     break;
                 default:
@@ -63,7 +63,7 @@ namespace robotjob.Common.Log
 
 
 
-        public static void Writelog(string message, LogLevel level = LogLevel.Success)
+        public static void Writelog(string message, LogLevel level = LogLevel.Info)
         {
             string _logPath = BuildFilePath(level);
 
@@ -75,7 +75,7 @@ namespace robotjob.Common.Log
         }
 
 
-        public static async void WritelogAsync(string message, LogLevel level = LogLevel.Success)
+        public static async void WritelogAsync(string message, LogLevel level = LogLevel.Info)
         {
             string _logPath = BuildFilePath(level);
 

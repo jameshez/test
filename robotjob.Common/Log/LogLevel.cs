@@ -9,7 +9,8 @@ namespace robotjob.Common.Log
     {
         Error = 1,
         Warning = 2,
-        Success = 3,
-        Debug = 4
+        Info = 3,
+        Debug = 4,
+        Fatal = 5
     }
 }

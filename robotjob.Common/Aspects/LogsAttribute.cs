@@ -1,4 +1,5 @@
 ﻿using PostSharp.Aspects;
+using robotjob.Common.Email;
 using robotjob.Common.Log;
 using System;
 using System.Diagnostics;
@@ -37,7 +38,10 @@ namespace robotjob.Common.Aspects
                 //进入的参数的值
                 sb.Append(parameters[i].Name + "=" + arguments[i] + "");
             }
-            LoggerHelper.Writelog("方法 " + eventArgs.Method.Name + " 开始执行，参数为：" + sb);
+            LoggerHelper.Writelog(
+                "方法 " + eventArgs.Method.Name + " 开始执行，参数为：" + sb,
+                LogLevel.Info
+                );
             
         }
 
@@ -46,12 +50,13 @@ namespace robotjob.Common.Aspects
             _stopwatch.Stop();
             LoggerHelper.Writelog(
                 "方法 " + args.Method.Name + " 执行结束，用时 " + _stopwatch.ElapsedMilliseconds + "ms",
-                LogLevel.Success
+                LogLevel.Info
                 );
             //LoggerHelper.WritelogAsync(
             //    "方法 " + args.Method.Name + " 执行结束，用时 " + _stopwatch.ElapsedMilliseconds + "ms",
             //    LogLevel.Success
             //    );
+            //EmailHelper.FatalError(new Exception("测试数据"));
         }
 
         public override void OnException(MethodExecutionArgs args)
