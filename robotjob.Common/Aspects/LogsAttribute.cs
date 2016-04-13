@@ -52,11 +52,6 @@ namespace robotjob.Common.Aspects
                 "方法 " + args.Method.Name + " 执行结束，用时 " + _stopwatch.ElapsedMilliseconds + "ms",
                 LogLevel.Info
                 );
-            //LoggerHelper.WritelogAsync(
-            //    "方法 " + args.Method.Name + " 执行结束，用时 " + _stopwatch.ElapsedMilliseconds + "ms",
-            //    LogLevel.Success
-            //    );
-            //EmailHelper.FatalError(new Exception("测试数据"));
         }
 
         public override void OnException(MethodExecutionArgs args)
