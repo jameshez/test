@@ -8,10 +8,6 @@ using System.Text;
 
 namespace robotjob.Common.Aspects
 {
-    public class ClassLogAttribute : TypeLevelAspect
-    {
-
-    }
     /// <summary>
     /// 目前记录了方法的执行时间，输出样例：
     /// [2016-04-12 10:39:36]方法 GetUser 执行结束，用时 164ms
